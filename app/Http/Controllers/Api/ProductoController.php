@@ -36,7 +36,7 @@ class ProductoController extends Controller
             'producto' => $datos['producto'],
             'cantidad' => $datos['cantidad'],
             'promocion' => $datos['promocion'],
-            'fecha_fin' => $datos['fecha_fin'],
+            'fecha_fin' => $datos['fecha_fin'] ?? null,
         ]);
 
         $producto->proveedores()->sync($datos['proveedores']);
